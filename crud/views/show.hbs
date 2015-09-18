@@ -1,0 +1,38 @@
+<a class="right link" href="/">Back to all postings</a>
+<h1>Galvanize Publications</h1>
+
+{{#pub}}
+  <a class="button right" href="/{{_id}}/edit">Edit Publication</a>
+  <h1>{{name}} - {{price}} - {{schedule}}</h1>
+  <p>
+    <h3>{{name}} - {{price}}</h3>
+  </p>
+  <p>
+    {{description}}
+  </p>
+  <p>
+    {{topics}}
+  </p>
+  <p>
+    This is a {{medium}} publication
+  </p>
+  <div class="subscribe">
+      <a href="/{{_id}}/subscribe" class="button">Subscribe</a>
+  </div>
+
+  <h2>Subscribers</h2>
+  <table>
+    <tr>
+      <th>Name</th>
+      <th>Address</th>
+      <th></th>
+    </tr>
+    {{#each subscribers}}
+      <tr>
+        <td>{{this.name}}</td>
+        <td>{{this.address}}</td>
+        <td><a href="/delete/{{../_id}}/{{this.subscriberId}}">cancel</a></td>
+      </tr>
+    {{/each}}
+  </table>
+{{/pub}}

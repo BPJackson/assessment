@@ -1,0 +1,38 @@
+<h1>Galvanize Publications</h1>
+{{#pub}}
+<form action="/{{_id}}/edit" method="post">
+  <h2>Edit Publication</h2>
+  <div class="form">
+    <label for="name">Publication Name:</label>
+    <input type="text" name="name" required value="{{name}}">
+  </div>
+  <div class="form">
+    <label for="description">Description</label>
+    <textarea name="description" rows="8" cols="40">{{description}}</textarea>
+
+  </div>
+  <div class="form">
+    <label for="topics">Topics</label>
+    <textarea name="topics" rows="8" cols="40">{{topics}}</textarea>
+  </div>
+  <div class="form">
+    <label for="price">Price</label>
+    <input name="price" value="{{price}}"></input>
+  </div>
+  <div class="form">
+    <label for="medium">This publication is</label>
+    Physical<input type="radio" name="physical" value="physical">
+    Electronic<input type="radio"  name="electronic" value="electronic">
+  </div>
+  <div class="form">
+    <label for="schedule">Publishing Schedule</label>
+    <input type="text" name="schedule" value="{{schedule}}"></input>
+  </div>
+  <div class="form">
+    <label for=""></label>
+      <input type="submit" value="Save Publication">
+      <a href="/">Cancel</a>
+      <a href="/{{_id}}/delete">Delete Publication</a>
+    </div>
+</form>
+{{/pub}}

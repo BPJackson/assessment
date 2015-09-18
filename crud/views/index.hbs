@@ -1,0 +1,20 @@
+<div class="top">
+  <h1>Galvanize Publications</h1>
+  <a href="/new" class="button wide">Create New Publication</a>
+</div>
+{{#pubs}}
+  <article class="pubs">
+    <h3>{{name}} - {{price}}</h3>
+    <p>
+      {{description}}
+    </p>
+    <p>
+      {{schedule}}
+    </p>
+    <p>
+      {{topics}}
+    </p>
+    <a href="/{{_id}}" class="button">View Publication</a>
+
+  </article>
+{{/pubs}}

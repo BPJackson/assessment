@@ -1,0 +1,35 @@
+
+<form action="/" method="post">
+  <h2>Create Publication</h2>
+  <div class="form">
+    <label for="name">Publication Name: </label>
+    <input type="text" name="name" required>
+  </div>
+  <div class="form">
+    <label for="description">Description</label>
+    <textarea name="description" rows="8" cols="40" ></textarea>
+
+  </div>
+  <div class="form">
+    <label for="topics">Topics</label>
+    <textarea name="topics" rows="8" cols="40" ></textarea>
+  </div>
+  <div class="form">
+    <label for="price">Price</label>
+    <input type="text" name="price" value="0.00"></input>
+  </div>
+  <div class="form">
+    <label for="medium">This publication is</label>
+    Physical<input type="radio" name="physical" value="physical">
+    Electronic<input type="radio" name="electronic" value="electronic">
+  </div>
+  <div class="form">
+    <label for="schedule">Publishing Schedule</label>
+    <input type="text" name="schedule" value="">
+  </div>
+  <div class="form">
+    <label for=""></label>
+    <input type="submit" value="Create Publication">
+    <a href="/">Cancel</a>
+  </div>
+</form>
